@@ -1,0 +1,41 @@
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transform: translate(-300px, 0) scale(4);
+  font-size: 23px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+canvas {
+  border: 1px solid #CCC;
+}
+.preview div {
+  margin: 5px;
+  text-align: center;
+  float: left;
+}
+
+.rotate{
+  display: block;
+  height: 22px;
+}
+.rotate-left {
+  float: left;
+  width: 100px;
+  padding-left: 25px;
+  background: url('../img/left.png') no-repeat;
+}
+.rotate-right {
+  float: right;
+  width: 75px;
+  background: url('../img/right.png') no-repeat right;
+}
