@@ -8,3 +8,24 @@
 </div>
 <h4 id="status">滑触照片可以选择上传区域。</h4>
 <div id="avatar-container"></div>
+<script type="text/javascript">
+	function isFileReaderSupported() {
+	  return typeof(FileReader) !== "undefined";
+	}
+
+	window.addEventListener('load', function(){
+		$('#status').bind({
+          done: function(e){
+            setTimeout(function(e){
+              window.location.reload();
+            }, 500);
+          }
+        })
+
+        if(isFileReaderSupported()){
+          $('#avatar-container').load('/faust/canvas');
+        } else {
+          $('#avatar-container').load('/faust/jcrop');
+        }
+	}, false);
+</script>
