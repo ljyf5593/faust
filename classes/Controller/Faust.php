@@ -88,7 +88,7 @@ class Controller_Faust extends Controller {
 		$config['imgUrl'] = URL::site($faust->get_avatar_source());
 		$config['uploadUrl'] = URL::site('/faust/upload');
 		$view = View::factory('faust/html/canvas')->set(array(
-			'jcrop_size' => Kohana::$config->load('faust.jcropSize'),
+			'config' => $config,
 			'avatar_source' => URL::site($faust->get_avatar_source()),
 			'avatar_size' => Faust::get_avatar_size(),
 		));
